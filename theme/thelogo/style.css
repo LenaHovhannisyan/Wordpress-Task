@@ -1,0 +1,432 @@
+/*!
+Theme Name: theLogo
+Author: Lena Hovhannisyan
+Version: 1.0.0
+Text Domain: thelogo
+*/
+
+:root {
+    --primary: #4CE0D7;
+    --white: #ffffff;
+    --secondary: #BCBCBC;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    color: #262626;
+}
+
+a {
+    text-decoration: none;
+}
+
+* {
+    margin: 0;
+}
+
+.container {
+    margin: 60px 66px 0;
+}
+
+/* header */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 100px;
+}
+
+#primary-menu.menu {
+    list-style: none;
+    display: flex;
+    column-gap: 25px;
+}
+
+#primary-menu.menu .menu-item {
+    padding: 10px 0;
+}
+
+#primary-menu.menu .menu-item a {
+    color: #262626;
+    font-weight: 600;
+}
+
+#primary-menu.menu .menu-item:last-child a {
+    padding: 10px 35px;
+    background: var(--primary);
+    box-shadow: 0 4px 4px rgb(0 0 0 / 25%);
+}
+
+#primary-menu.menu .menu-item:not(:last-child) a:hover,
+.menu-item.current-menu-item a {
+    border-bottom: 3px solid var(--primary);
+}
+
+.menu-toggle {
+    display: none;
+}
+
+/* front page */
+.latest-post-banner {
+    position: relative;
+    width: 100%;
+    height: 567px;
+    background-color: #f0f0f0;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.latest-post-thumbnail {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: opacity 0.3s ease;
+}
+
+.last-news,
+.books {
+    margin-top: 100px;
+}
+
+.latest-post-info {
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    transform: translate(-95%, -50%);
+    width: 45%;
+    color: #fff;
+    z-index: 10;
+}
+
+.latest-post-date {
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.latest-post-title {
+    font-size: 40px;
+    margin-top: 10px;
+    color: var(--primary);
+}
+
+.section-title {
+    text-align: center;
+}
+
+.last-news-container {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 24px;
+    margin: 50px 0;
+}
+
+.attachment-medium.size-medium.wp-post-image {
+    object-fit: cover;
+    width: 100%;
+    height: 254px;
+}
+
+.post-date,
+.post-read-time {
+    color: var(--secondary);
+    font-weight: 300;
+    font-size: 14px;
+    padding-right: 15px;
+}
+
+.post-title a {
+    color: #262626;
+    font-size: 20px;
+}
+
+#thelogo-book-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px auto 0;
+    row-gap: 50px;
+    flex-direction: column;
+}
+
+.book-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 50px;
+}
+
+.book-item {
+    margin-bottom: 20px;
+    color: #262626;
+}
+
+.book-thumbnail {
+    margin-right: 20px;
+}
+
+.book-thumbnail img {
+    max-width: 233px;
+    max-height: 323px;
+}
+
+.book-details h3 {
+    font-size: 20px;
+}
+
+.book-details p {
+    color: var(--secondary);
+    font-weight: 100;
+}
+
+.load-more-btn-container {
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+    margin-top: 50px;
+}
+
+#thelogo-load-more {
+    padding: 10px 35px;
+    background-color: var(--primary);
+    color: #262626;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+}
+
+.loaded-all .book-list:not(:first-child) {
+    display: none !important;
+}
+
+.post-card {
+    flex: 1;
+}
+
+/* single post */
+.single-post-continer {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 150px;
+}
+
+.single-post-continer .post {
+    width: 70%;
+}
+
+.widget-area {
+    width: 30%;
+}
+
+.navigation.post-navigation {
+    width: 100%;
+}
+
+.post-content h2.wp-block-heading {
+    margin-top: 60px;
+    margin-bottom: 35px;
+}
+
+.post-content {
+    padding-right: 60px;
+}
+
+.post-content p {
+    margin-bottom: 35px;
+    font-size: 16px;
+}
+
+/* all books */
+.book-archive {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.book-archive .book-item {
+    width: calc(25% - 20px);
+    /* Adjust this value to control the number of items per row */
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.book-archive .book-item:hover {
+    background-color: #e9e9e9;
+}
+
+.book-archive .book-thumbnail {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.book-archive .book-thumbnail img {
+    max-width: 100%;
+    height: auto;
+}
+
+.book-archive .book-details {
+    text-align: center;
+}
+
+.book-archive .book-title {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.book-archive .book-title a {
+    text-decoration: none;
+    color: #333;
+}
+
+.book-title a:hover {
+    text-decoration: underline;
+}
+
+.book-details p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.pagination {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.pagination ul {
+    list-style: none;
+    padding: 0;
+    display: inline-block;
+}
+
+.pagination ul li {
+    display: inline;
+    margin: 0 5px;
+}
+
+.pagination .page-numbers {
+    display: inline-block;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    color: #0073aa;
+    text-decoration: none;
+}
+
+.pagination .page-numbers.current {
+    background-color: #0073aa;
+    color: #fff;
+    border-color: #0073aa;
+}
+
+.pagination .page-numbers:hover {
+    background-color: #005177;
+    color: #fff;
+}
+
+.page-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+#thelogo-book-list-pagination .book-list {
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+#thelogo-book-list-pagination .book-list a {
+    flex: 1;
+}
+
+.post-thumbnail img {
+    width: 100%;
+}
+
+/* footer */
+.site-footer {
+    margin-top: 100px;
+    background: #F9F9F9;
+    padding: 30px 86px;
+}
+
+.site-info {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 20px;
+    border-bottom: 1px solid #F2F2F2;
+}
+
+.social-links {
+    display: flex;
+    align-items: center;
+}
+
+.site-info .social-icon:hover {
+    color: #262626;
+}
+
+.footer-social-links-title {
+    margin-right: 38px;
+    font-size: 24px;
+}
+
+.social-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: var(--primary);
+    line-height: 45px;
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+}
+
+.site-info .social-icon:not(:last-child) {
+    margin-right: 20px;
+    /* Add margin-right to all except the last item */
+}
+
+.copyright {
+    font-size: 14px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+@media screen and (max-width: 768px) {
+    .site-footer {
+        padding: 20px 26px;
+    }
+
+    .site-info {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu-main-menu-container {
+        display: none;
+    }
+
+    .social-links {
+        flex-direction: column;
+    }
+}
