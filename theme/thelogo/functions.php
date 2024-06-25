@@ -69,6 +69,16 @@ function thelogo_widgets_init()
 			'after_title' => '</h2>',
 		)
 	);
+
+	// Widget area for custom post type 'books'
+    register_sidebar( array(
+        'name'          => __( 'Books Widget Area', 'text_domain' ),
+        'id'            => 'books-widget-area',
+        'before_widget' => '<div class="widget %2$s">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h2 class="widget-title">',
+        'after_title'   => '</h2>',
+    ) );
 }
 add_action('widgets_init', 'thelogo_widgets_init');
 
@@ -173,3 +183,9 @@ function thelogo_customize_css()
 	<?php
 }
 add_action('wp_head', 'thelogo_customize_css');
+
+
+/**
+ * Custom Widget.
+ */
+require get_template_directory() . '/inc/book-widgets.php';
